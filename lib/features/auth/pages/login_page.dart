@@ -54,16 +54,23 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Logo/Icon
+                  // Logo/Icon with Gradient
                   Container(
                     width: 100,
                     height: 100,
                     decoration: BoxDecoration(
-                      color: AppColors.blue,
+                      gradient: AppColors.primaryGradient,
                       borderRadius: BorderRadius.circular(24),
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.primary.withOpacity(0.3),
+                          blurRadius: 20,
+                          offset: const Offset(0, 10),
+                        ),
+                      ],
                     ),
                     child: const Icon(
-                      Icons.business_center,
+                      Icons.business_center_rounded,
                       size: 50,
                       color: AppColors.white,
                     ),
@@ -149,15 +156,15 @@ class _LoginPageState extends State<LoginPage> {
                           child: Container(
                             padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
-                              color: AppColors.red.withOpacity(0.1),
+                              color: AppColors.errorContainer,
                               borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: AppColors.red),
+                              border: Border.all(color: AppColors.error),
                             ),
                             child: Row(
                               children: [
-                                const Icon(
+                                Icon(
                                   Icons.error_outline,
-                                  color: AppColors.red,
+                                  color: AppColors.error,
                                   size: 20,
                                 ),
                                 const SizedBox(width: 8),
@@ -165,7 +172,7 @@ class _LoginPageState extends State<LoginPage> {
                                   child: Text(
                                     authProvider.errorMessage ?? 'Login failed',
                                     style: AppTextStyles.bodySmall.copyWith(
-                                      color: AppColors.red,
+                                      color: AppColors.errorDark,
                                     ),
                                   ),
                                 ),
@@ -185,7 +192,7 @@ class _LoginPageState extends State<LoginPage> {
                         text: 'Sign In',
                         onPressed: _handleLogin,
                         isLoading: authProvider.state == AuthState.loading,
-                        backgroundColor: AppColors.blue,
+                        backgroundColor: AppColors.primary,
                       );
                     },
                   ),
@@ -195,16 +202,16 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: AppColors.yellow.withOpacity(0.1),
+                      color: AppColors.infoContainer,
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
-                        color: AppColors.yellow.withOpacity(0.3),
+                        color: AppColors.info.withOpacity(0.3),
                       ),
                     ),
                     child: Text(
                       'Demo Credentials:\nEmail: user@example.com\nPassword: password123',
                       style: AppTextStyles.bodySmall.copyWith(
-                        color: AppColors.textSecondary,
+                        color: AppColors.infoDark,
                       ),
                       textAlign: TextAlign.center,
                     ),

@@ -86,10 +86,10 @@ class _LivenessPageState extends State<LivenessPage> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: _isSuccess
-                      ? AppColors.green.withOpacity(0.1)
-                      : AppColors.blue.withOpacity(0.1),
+                      ? AppColors.successContainer
+                      : AppColors.primaryContainer,
                   border: Border.all(
-                    color: _isSuccess ? AppColors.green : AppColors.blue,
+                    color: _isSuccess ? AppColors.success : AppColors.primary,
                     width: 3,
                   ),
                 ),
@@ -98,14 +98,14 @@ class _LivenessPageState extends State<LivenessPage> {
                         child: CircularProgressIndicator(
                           strokeWidth: 3,
                           valueColor: AlwaysStoppedAnimation<Color>(
-                            AppColors.blue,
+                            AppColors.primary,
                           ),
                         ),
                       )
                     : Icon(
                         _isSuccess ? Icons.check_circle : Icons.error,
                         size: 100,
-                        color: _isSuccess ? AppColors.green : AppColors.red,
+                        color: _isSuccess ? AppColors.success : AppColors.error,
                       ),
               ),
               const SizedBox(height: 32),
@@ -118,7 +118,7 @@ class _LivenessPageState extends State<LivenessPage> {
                         ? 'Verification Successful!'
                         : 'Verification Failed',
                 style: AppTextStyles.h3.copyWith(
-                  color: _isSuccess ? AppColors.green : AppColors.textPrimary,
+                  color: _isSuccess ? AppColors.success : AppColors.textPrimary,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -143,17 +143,17 @@ class _LivenessPageState extends State<LivenessPage> {
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: AppColors.yellow.withOpacity(0.1),
+                    color: AppColors.warningContainer,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                      color: AppColors.yellow.withOpacity(0.3),
+                      color: AppColors.warning.withOpacity(0.3),
                     ),
                   ),
                   child: Row(
                     children: [
                       const Icon(
                         Icons.info_outline,
-                        color: AppColors.yellowDark,
+                        color: AppColors.warningDark,
                         size: 24,
                       ),
                       const SizedBox(width: 12),
@@ -161,7 +161,7 @@ class _LivenessPageState extends State<LivenessPage> {
                         child: Text(
                           'This is a placeholder for liveness detection. In production, this would use face recognition or biometric verification.',
                           style: AppTextStyles.bodySmall.copyWith(
-                            color: AppColors.yellowDark,
+                            color: AppColors.warningDark,
                           ),
                         ),
                       ),

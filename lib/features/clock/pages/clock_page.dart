@@ -63,7 +63,7 @@ class _ClockPageState extends State<ClockPage> {
           children: [
             // Date Card
             AppCard(
-              color: AppColors.blue,
+              color: AppColors.primary,
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
@@ -111,7 +111,7 @@ class _ClockPageState extends State<ClockPage> {
                   // Clock In
                   _buildTimeRow(
                     icon: Icons.login,
-                    iconColor: AppColors.green,
+                    iconColor: AppColors.success,
                     label: 'Clock In',
                     time: todayRecord?.clockInTime,
                     location: todayRecord?.clockInLocation,
@@ -121,7 +121,7 @@ class _ClockPageState extends State<ClockPage> {
                   // Clock Out
                   _buildTimeRow(
                     icon: Icons.logout,
-                    iconColor: AppColors.red,
+                    iconColor: AppColors.error,
                     label: 'Clock Out',
                     time: todayRecord?.clockOutTime,
                     location: todayRecord?.clockOutLocation,
@@ -137,12 +137,12 @@ class _ClockPageState extends State<ClockPage> {
                         Container(
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                            color: AppColors.blue.withOpacity(0.1),
+                            color: AppColors.primary.withOpacity(0.1),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: const Icon(
                             Icons.timer,
-                            color: AppColors.blue,
+                            color: AppColors.primary,
                             size: 20,
                           ),
                         ),
@@ -158,7 +158,7 @@ class _ClockPageState extends State<ClockPage> {
                         Text(
                           todayRecord.workDurationString,
                           style: AppTextStyles.h5.copyWith(
-                            color: AppColors.blue,
+                            color: AppColors.primary,
                           ),
                         ),
                       ],
@@ -175,30 +175,30 @@ class _ClockPageState extends State<ClockPage> {
                 text: 'Clock In',
                 icon: Icons.login,
                 onPressed: _handleClockIn,
-                backgroundColor: AppColors.green,
+                backgroundColor: AppColors.success,
               )
             else if (!clockProvider.hasClockedOutToday)
               PrimaryButton(
                 text: 'Clock Out',
                 icon: Icons.logout,
                 onPressed: _handleClockOut,
-                backgroundColor: AppColors.red,
+                backgroundColor: AppColors.error,
               )
             else
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: AppColors.green.withOpacity(0.1),
+                  color: AppColors.successContainer,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: AppColors.green.withOpacity(0.3),
+                    color: AppColors.success.withOpacity(0.3),
                   ),
                 ),
                 child: Row(
                   children: [
                     const Icon(
                       Icons.check_circle,
-                      color: AppColors.green,
+                      color: AppColors.success,
                       size: 28,
                     ),
                     const SizedBox(width: 12),
@@ -206,7 +206,7 @@ class _ClockPageState extends State<ClockPage> {
                       child: Text(
                         'You have completed your work for today!',
                         style: AppTextStyles.bodyMedium.copyWith(
-                          color: AppColors.greenDark,
+                          color: AppColors.successDark,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -220,10 +220,10 @@ class _ClockPageState extends State<ClockPage> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppColors.yellow.withOpacity(0.1),
+                color: AppColors.warningContainer,
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(
-                  color: AppColors.yellow.withOpacity(0.3),
+                  color: AppColors.warning.withOpacity(0.3),
                 ),
               ),
               child: Row(
@@ -231,7 +231,7 @@ class _ClockPageState extends State<ClockPage> {
                 children: [
                   const Icon(
                     Icons.info_outline,
-                    color: AppColors.yellowDark,
+                    color: AppColors.warningDark,
                     size: 20,
                   ),
                   const SizedBox(width: 8),
@@ -239,7 +239,7 @@ class _ClockPageState extends State<ClockPage> {
                     child: Text(
                       'Clock In/Out button will navigate to Liveness Check (3 seconds simulation)',
                       style: AppTextStyles.bodySmall.copyWith(
-                        color: AppColors.yellowDark,
+                        color: AppColors.warningDark,
                       ),
                     ),
                   ),
