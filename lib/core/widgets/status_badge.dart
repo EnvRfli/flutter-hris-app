@@ -21,28 +21,28 @@ class StatusBadge extends StatelessWidget {
 
     switch (type) {
       case BadgeType.success:
-        return AppColors.green.withOpacity(0.1);
+        return AppColors.successContainer;
       case BadgeType.warning:
-        return AppColors.yellow.withOpacity(0.1);
+        return AppColors.warningContainer;
       case BadgeType.error:
-        return AppColors.red.withOpacity(0.1);
+        return AppColors.errorContainer;
       case BadgeType.info:
-        return AppColors.blue.withOpacity(0.1);
+        return AppColors.infoContainer;
       case BadgeType.neutral:
-        return AppColors.grey.withOpacity(0.1);
+        return AppColors.surfaceVariant;
     }
   }
 
   Color _getTextColor() {
     switch (type) {
       case BadgeType.success:
-        return AppColors.greenDark;
+        return AppColors.successDark;
       case BadgeType.warning:
-        return AppColors.yellowDark;
+        return AppColors.warningDark;
       case BadgeType.error:
-        return AppColors.redDark;
+        return AppColors.errorDark;
       case BadgeType.info:
-        return AppColors.blueDark;
+        return AppColors.infoDark;
       case BadgeType.neutral:
         return AppColors.greyDark;
     }
@@ -51,13 +51,13 @@ class StatusBadge extends StatelessWidget {
   Color _getBorderColor() {
     switch (type) {
       case BadgeType.success:
-        return AppColors.green;
+        return AppColors.success;
       case BadgeType.warning:
-        return AppColors.yellow;
+        return AppColors.warning;
       case BadgeType.error:
-        return AppColors.red;
+        return AppColors.error;
       case BadgeType.info:
-        return AppColors.blue;
+        return AppColors.info;
       case BadgeType.neutral:
         return AppColors.grey;
     }
