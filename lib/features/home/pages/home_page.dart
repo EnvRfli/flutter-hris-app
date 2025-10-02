@@ -59,9 +59,19 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            // Welcome Card
-            AppCard(
-              color: AppColors.blue,
+            // Welcome Card with Gradient
+            Container(
+              decoration: BoxDecoration(
+                gradient: AppColors.primaryGradient,
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.primary.withOpacity(0.2),
+                    blurRadius: 15,
+                    offset: const Offset(0, 5),
+                  ),
+                ],
+              ),
               padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -164,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 16),
                   _buildStatusRow(
                     icon: Icons.login,
-                    iconColor: AppColors.green,
+                    iconColor: AppColors.success,
                     label: 'Clock In',
                     value: clockProvider.todayRecord?.clockInTime != null
                         ? DateFormat('HH:mm')
@@ -174,7 +184,7 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 12),
                   _buildStatusRow(
                     icon: Icons.logout,
-                    iconColor: AppColors.red,
+                    iconColor: AppColors.error,
                     label: 'Clock Out',
                     value: clockProvider.todayRecord?.clockOutTime != null
                         ? DateFormat('HH:mm')
@@ -184,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 12),
                   _buildStatusRow(
                     icon: Icons.timer,
-                    iconColor: AppColors.blue,
+                    iconColor: AppColors.primary,
                     label: 'Work Duration',
                     value: clockProvider.todayRecord?.workDurationString ?? '-',
                   ),
@@ -205,7 +215,7 @@ class _HomePageState extends State<HomePage> {
                   child: _buildQuickActionCard(
                     icon: Icons.access_time,
                     label: 'Clock In/Out',
-                    color: AppColors.blue,
+                    color: AppColors.primary,
                     onTap: () {
                       // Navigate to clock page
                     },
@@ -216,7 +226,7 @@ class _HomePageState extends State<HomePage> {
                   child: _buildQuickActionCard(
                     icon: Icons.history,
                     label: 'History',
-                    color: AppColors.yellow,
+                    color: AppColors.secondary,
                     onTap: () {
                       // Navigate to history page
                     },
@@ -231,7 +241,7 @@ class _HomePageState extends State<HomePage> {
                   child: _buildQuickActionCard(
                     icon: Icons.person,
                     label: 'Profile',
-                    color: AppColors.green,
+                    color: AppColors.accent1,
                     onTap: () {
                       // Navigate to profile page
                     },

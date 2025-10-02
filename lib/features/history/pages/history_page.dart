@@ -69,7 +69,7 @@ class _HistoryPageState extends State<HistoryPage> {
               const Icon(
                 Icons.error_outline,
                 size: 64,
-                color: AppColors.red,
+                color: AppColors.error,
               ),
               const SizedBox(height: 16),
               Text(
@@ -151,12 +151,12 @@ class _HistoryPageState extends State<HistoryPage> {
                   Container(
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
-                      color: AppColors.blue.withOpacity(0.1),
+                      color: AppColors.primaryContainer,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Icon(
                       Icons.calendar_today,
-                      color: AppColors.blue,
+                      color: AppColors.primary,
                       size: 20,
                     ),
                   ),
@@ -196,7 +196,7 @@ class _HistoryPageState extends State<HistoryPage> {
               Expanded(
                 child: _buildTimeDetail(
                   icon: Icons.login,
-                  iconColor: AppColors.green,
+                  iconColor: AppColors.success,
                   label: 'Clock In',
                   time: record.clockInTime,
                   location: record.clockInLocation,
@@ -210,7 +210,7 @@ class _HistoryPageState extends State<HistoryPage> {
               Expanded(
                 child: _buildTimeDetail(
                   icon: Icons.logout,
-                  iconColor: AppColors.red,
+                  iconColor: AppColors.error,
                   label: 'Clock Out',
                   time: record.clockOutTime,
                   location: record.clockOutLocation,
@@ -229,7 +229,7 @@ class _HistoryPageState extends State<HistoryPage> {
               children: [
                 const Icon(
                   Icons.timer,
-                  color: AppColors.blue,
+                  color: AppColors.primary,
                   size: 20,
                 ),
                 const SizedBox(width: 8),
@@ -243,7 +243,7 @@ class _HistoryPageState extends State<HistoryPage> {
                   record.workDurationString,
                   style: AppTextStyles.bodyMedium.copyWith(
                     fontWeight: FontWeight.w600,
-                    color: AppColors.blue,
+                    color: AppColors.primary,
                   ),
                 ),
               ],
