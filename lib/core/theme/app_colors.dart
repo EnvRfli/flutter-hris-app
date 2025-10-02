@@ -17,9 +17,9 @@ class AppColors {
   static const Color secondaryContainer = Color(0xFFCCFBF1);
 
   // Accent Colors (Soft)
-  static const Color accent1 = Color(0xFFEC4899); // Soft Pink
-  static const Color accent2 = Color(0xFFF59E0B); // Soft Amber
-  static const Color accent3 = Color(0xFF8B5CF6); // Soft Purple
+  static const Color accent1 = Color(0xFFEC4899);
+  static const Color accent2 = Color(0xFFF59E0B);
+  static const Color accent3 = Color(0xFF8B5CF6);
 
   // Status Colors (Soft versions)
   static const Color success = Color(0xFF10B981); // Soft Green
