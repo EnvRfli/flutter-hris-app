@@ -31,11 +31,11 @@ class ProfilePage extends StatelessWidget {
                 // Avatar
                 CircleAvatar(
                   radius: 50,
-                  backgroundColor: AppColors.blue.withOpacity(0.1),
+                  backgroundColor: AppColors.primaryContainer,
                   child: Text(
                     user?.name.substring(0, 1).toUpperCase() ?? 'U',
                     style: AppTextStyles.h1.copyWith(
-                      color: AppColors.blue,
+                      color: AppColors.primary,
                     ),
                   ),
                 ),
@@ -175,7 +175,7 @@ class ProfilePage extends StatelessWidget {
             text: 'Logout',
             icon: Icons.logout,
             onPressed: () => _handleLogout(context),
-            backgroundColor: AppColors.red,
+            backgroundColor: AppColors.error,
           ),
           const SizedBox(height: 16),
 
@@ -203,10 +203,10 @@ class ProfilePage extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: AppColors.blue.withOpacity(0.1),
+            color: AppColors.primaryContainer,
             borderRadius: BorderRadius.circular(8),
           ),
-          child: Icon(icon, color: AppColors.blue, size: 20),
+          child: Icon(icon, color: AppColors.primary, size: 20),
         ),
         const SizedBox(width: 12),
         Expanded(
@@ -300,7 +300,7 @@ class ProfilePage extends StatelessWidget {
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             style: TextButton.styleFrom(
-              foregroundColor: AppColors.red,
+              foregroundColor: AppColors.error,
             ),
             child: const Text('Logout'),
           ),

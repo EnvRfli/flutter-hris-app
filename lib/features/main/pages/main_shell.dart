@@ -85,7 +85,7 @@ class _MainShellState extends State<MainShell> {
           onTap: _onItemTapped,
           type: BottomNavigationBarType.fixed,
           backgroundColor: AppColors.white,
-          selectedItemColor: AppColors.blue,
+          selectedItemColor: AppColors.primary,
           unselectedItemColor: AppColors.grey,
           selectedFontSize: 12,
           unselectedFontSize: 12,
