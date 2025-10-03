@@ -440,11 +440,13 @@ class _HomePageState extends State<HomePage> {
                             size: 20,
                           ),
                           const SizedBox(width: 8),
-                          Text(
-                            'Kerja hari ini sudah selesai!',
-                            style: AppTextStyles.bodyMedium.copyWith(
-                              color: AppColors.successDark,
-                              fontWeight: FontWeight.w600,
+                          Flexible(
+                            child: Text(
+                              'Anda telah menyelesaikan pekerjaan hari ini.',
+                              style: AppTextStyles.bodyMedium.copyWith(
+                                color: AppColors.successDark,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           ),
                         ],
