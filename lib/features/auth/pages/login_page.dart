@@ -54,28 +54,13 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Logo/Icon with Gradient
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      gradient: AppColors.primaryGradient,
-                      borderRadius: BorderRadius.circular(24),
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppColors.primary.withOpacity(0.3),
-                          blurRadius: 20,
-                          offset: const Offset(0, 10),
-                        ),
-                      ],
-                    ),
-                    child: const Icon(
-                      Icons.business_center_rounded,
-                      size: 50,
-                      color: AppColors.white,
-                    ),
+                  // Simple Icon
+                  Icon(
+                    Icons.business_center_rounded,
+                    size: 48,
+                    color: AppColors.primary,
                   ),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 24),
 
                   // Title
                   Text(
