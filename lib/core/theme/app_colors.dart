@@ -51,9 +51,10 @@ class AppColors {
   static const Color greyExtraLight = Color(0xFFF9FAFB);
 
   // Background Colors (Softer)
-  static const Color background = Color(0xFFF9FAFB); // Very soft grey
-  static const Color surface = Color(0xFFFFFFFF);
-  static const Color surfaceVariant = Color(0xFFF3F4F6);
+  static const Color background = Color(
+      0xFFF3F4F6); // Soft grey background (lebih gelap untuk kontras dengan card)
+  static const Color surface = Color(0xFFFFFFFF); // Pure white untuk card
+  static const Color surfaceVariant = Color(0xFFF9FAFB);
   static const Color surfaceContainer = Color(0xFFEFF6FF);
 
   // Text Colors (Less harsh)

@@ -5,7 +5,7 @@ import '../state/providers/auth_provider.dart';
 import '../features/auth/pages/login_page.dart';
 import '../features/main/pages/main_shell.dart';
 import '../features/home/pages/home_page.dart';
-import '../features/clock/pages/clock_page.dart';
+import '../features/schedule/pages/schedule_page.dart';
 import '../features/clock/pages/liveness_page.dart';
 import '../features/history/pages/history_page.dart';
 import '../features/profile/pages/profile_page.dart';
@@ -13,7 +13,7 @@ import '../features/profile/pages/profile_page.dart';
 class AppRouter {
   static const String login = '/login';
   static const String home = '/';
-  static const String clock = '/clock';
+  static const String schedule = '/schedule';
   static const String liveness = '/liveness';
   static const String history = '/history';
   static const String profile = '/profile';
@@ -54,9 +54,9 @@ class AppRouter {
               ),
             ),
             GoRoute(
-              path: clock,
+              path: schedule,
               pageBuilder: (context, state) => const NoTransitionPage(
-                child: ClockPage(),
+                child: SchedulePage(),
               ),
             ),
             GoRoute(

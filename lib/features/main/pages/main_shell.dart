@@ -22,15 +22,15 @@ class _MainShellState extends State<MainShell> {
       route: '/',
     ),
     _NavigationItem(
-      icon: Icons.access_time_outlined,
-      activeIcon: Icons.access_time,
-      label: 'Clock',
-      route: '/clock',
+      icon: Icons.calendar_month_outlined,
+      activeIcon: Icons.calendar_month,
+      label: 'Jadwal',
+      route: '/schedule',
     ),
     _NavigationItem(
       icon: Icons.history_outlined,
       activeIcon: Icons.history,
-      label: 'History',
+      label: 'Riwayat',
       route: '/history',
     ),
     _NavigationItem(
