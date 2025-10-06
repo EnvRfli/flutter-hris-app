@@ -119,6 +119,20 @@ class ProfilePage extends StatelessWidget {
                 ),
                 const Divider(height: 1, indent: 56),
                 _buildMenuTile(
+                  icon: Icons.lock_outline,
+                  title: 'Payslip',
+                  subtitle: 'Check your monthly payslips',
+                  onTap: () {
+                    // TODO: Navigate to change password
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Payslip menu - Coming Soon'),
+                      ),
+                    );
+                  },
+                ),
+                const Divider(height: 1, indent: 56),
+                _buildMenuTile(
                   icon: Icons.notifications_none,
                   title: 'Notifications',
                   subtitle: 'Manage notification preferences',
