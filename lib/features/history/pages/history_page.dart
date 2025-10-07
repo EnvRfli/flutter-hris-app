@@ -142,7 +142,6 @@ class _HistoryPageState extends State<HistoryPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -189,8 +188,6 @@ class _HistoryPageState extends State<HistoryPage> {
           const SizedBox(height: 16),
           const Divider(height: 1),
           const SizedBox(height: 16),
-
-          // Clock In/Out Details
           Row(
             children: [
               Expanded(
@@ -218,8 +215,6 @@ class _HistoryPageState extends State<HistoryPage> {
               ),
             ],
           ),
-
-          // Work Duration
           if (isCompleted) ...[
             const SizedBox(height: 16),
             const Divider(height: 1),
