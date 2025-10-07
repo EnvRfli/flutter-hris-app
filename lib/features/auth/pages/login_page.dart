@@ -54,15 +54,12 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // Simple Icon
                   Icon(
                     Icons.business_center_rounded,
                     size: 48,
                     color: AppColors.primary,
                   ),
                   const SizedBox(height: 24),
-
-                  // Title
                   Text(
                     'Welcome Back',
                     style: AppTextStyles.h2,
@@ -77,8 +74,6 @@ class _LoginPageState extends State<LoginPage> {
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 48),
-
-                  // Email Field
                   TextFormField(
                     controller: _emailController,
                     decoration: const InputDecoration(
@@ -98,8 +93,6 @@ class _LoginPageState extends State<LoginPage> {
                     },
                   ),
                   const SizedBox(height: 16),
-
-                  // Password Field
                   TextFormField(
                     controller: _passwordController,
                     decoration: InputDecoration(
@@ -131,8 +124,6 @@ class _LoginPageState extends State<LoginPage> {
                     },
                   ),
                   const SizedBox(height: 24),
-
-                  // Error Message
                   Consumer<AuthProvider>(
                     builder: (context, authProvider, _) {
                       if (authProvider.state == AuthState.error) {
@@ -169,8 +160,6 @@ class _LoginPageState extends State<LoginPage> {
                       return const SizedBox.shrink();
                     },
                   ),
-
-                  // Login Button
                   Consumer<AuthProvider>(
                     builder: (context, authProvider, _) {
                       return PrimaryButton(
@@ -182,8 +171,6 @@ class _LoginPageState extends State<LoginPage> {
                     },
                   ),
                   const SizedBox(height: 16),
-
-                  // Info Text
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
