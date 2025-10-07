@@ -61,7 +61,6 @@ class _ClockPageState extends State<ClockPage> {
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            // Date Card
             AppCard(
               color: AppColors.primary,
               padding: const EdgeInsets.all(20),
@@ -90,8 +89,6 @@ class _ClockPageState extends State<ClockPage> {
               ),
             ),
             const SizedBox(height: 20),
-
-            // Status Card
             AppCard(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,8 +104,6 @@ class _ClockPageState extends State<ClockPage> {
                     ],
                   ),
                   const SizedBox(height: 20),
-
-                  // Clock In
                   _buildTimeRow(
                     icon: Icons.login,
                     iconColor: AppColors.success,
@@ -117,8 +112,6 @@ class _ClockPageState extends State<ClockPage> {
                     location: todayRecord?.clockInLocation,
                   ),
                   const SizedBox(height: 16),
-
-                  // Clock Out
                   _buildTimeRow(
                     icon: Icons.logout,
                     iconColor: AppColors.error,
@@ -127,8 +120,6 @@ class _ClockPageState extends State<ClockPage> {
                     location: todayRecord?.clockOutLocation,
                   ),
                   const SizedBox(height: 16),
-
-                  // Work Duration
                   if (todayRecord != null) ...[
                     const Divider(height: 1),
                     const SizedBox(height: 16),
@@ -168,8 +159,6 @@ class _ClockPageState extends State<ClockPage> {
               ),
             ),
             const SizedBox(height: 24),
-
-            // Action Buttons
             if (!clockProvider.hasClockedInToday)
               PrimaryButton(
                 text: 'Clock In',
@@ -215,8 +204,6 @@ class _ClockPageState extends State<ClockPage> {
                 ),
               ),
             const SizedBox(height: 16),
-
-            // Info Text
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
