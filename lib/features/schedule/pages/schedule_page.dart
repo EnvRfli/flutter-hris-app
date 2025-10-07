@@ -53,7 +53,6 @@ class _SchedulePageState extends State<SchedulePage>
 
     final userId = authProvider.user!.id;
 
-    // Load schedule
     if (mounted) {
       setState(() => _loadingSchedule = true);
     }
@@ -68,7 +67,6 @@ class _SchedulePageState extends State<SchedulePage>
       });
     }
 
-    // Load leave & overtime requests
     if (mounted) {
       setState(() => _loadingLeave = true);
     }
@@ -123,7 +121,6 @@ class _SchedulePageState extends State<SchedulePage>
       child: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // Summary Card
           AppCard(
             child: Column(
               children: [
@@ -166,8 +163,6 @@ class _SchedulePageState extends State<SchedulePage>
             ),
           ),
           const SizedBox(height: 16),
-
-          // Schedule List
           Text(
             'Jadwal 14 Hari Kedepan',
             style: AppTextStyles.h5,
@@ -304,7 +299,6 @@ class _SchedulePageState extends State<SchedulePage>
       child: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // Leave Balance Card
           AppCard(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -339,8 +333,6 @@ class _SchedulePageState extends State<SchedulePage>
             ),
           ),
           const SizedBox(height: 16),
-
-          // Quick Actions for Leave
           Row(
             children: [
               Expanded(
@@ -367,8 +359,6 @@ class _SchedulePageState extends State<SchedulePage>
             ],
           ),
           const SizedBox(height: 16),
-
-          // Leave Request List
           Text(
             'Riwayat Pengajuan',
             style: AppTextStyles.h5,
@@ -532,7 +522,6 @@ class _SchedulePageState extends State<SchedulePage>
       child: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // Quick Action for Overtime
           _buildActionButton(
             'Ajukan Lembur',
             Icons.work_history,
@@ -542,8 +531,6 @@ class _SchedulePageState extends State<SchedulePage>
             },
           ),
           const SizedBox(height: 16),
-
-          // Overtime Request List
           Text(
             'Riwayat Lembur',
             style: AppTextStyles.h5,
