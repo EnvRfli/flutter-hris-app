@@ -40,7 +40,6 @@ class _HomePageState extends State<HomePage> {
     if (authProvider.user != null) {
       clockProvider.loadTodayRecord(authProvider.user!.id);
 
-      // Load today's schedule
       if (mounted) {
         setState(() => _loadingSchedule = true);
       }
@@ -78,9 +77,7 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
             icon: const Icon(Icons.notifications_outlined),
-            onPressed: () {
-              // TODO: Navigate to notifications
-            },
+            onPressed: () {},
           ),
         ],
       ),
@@ -91,7 +88,6 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            // Welcome Card with Gradient
             Container(
               decoration: BoxDecoration(
                 gradient: AppColors.primaryGradient,
@@ -172,8 +168,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(height: 20),
-
-            // Today's Schedule Card
             AppCard(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -292,8 +286,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(height: 20),
-
-            // Clock In/Out Buttons
             AppCard(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -456,8 +448,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(height: 20),
-
-            // Quick Actions
             Text(
               'Menu Lainnya',
               style: AppTextStyles.h5,
